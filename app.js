@@ -7,13 +7,13 @@ var logger = require('morgan');
 const PORT = process.env.PORT || 3000
 
 
-var indexRouter = require('./index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('/index');
+var usersRouter = require('/routes/users');
 // first start of new page
-var deleteRouter = require('./routes/delete');
-var profileRouter = require('./routes/profile')
-var createrRouter = require('./routes/creater')
-var mapperRouter = require('./routes/mapper')
+var deleteRouter = require('/routes/delete');
+var profileRouter = require('/routes/profile')
+var createrRouter = require('/routes/creater')
+var mapperRouter = require('/routes/mapper')
 
 
 var app = express();
