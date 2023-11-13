@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const PORT = process.env.PORT || 3000
+
+
 var indexRouter = require('./index');
 var usersRouter = require('./routes/users');
 // first start of new page
@@ -49,6 +52,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`)
+})
 
 module.exports = app;
