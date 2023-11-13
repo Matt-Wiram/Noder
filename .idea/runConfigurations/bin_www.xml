@@ -4,7 +4,7 @@
       <env name="DEBUG" value="noder:*" />
     </envs>
     <EXTENSION ID="com.jetbrains.nodejs.run.NodeStartBrowserRunConfigurationExtension">
-      <browser url="http://localhost:3000/" />
+      <browser url="https://cryptic-tor-56909-5784f15687f4.herokuapp.com/" />
     </EXTENSION>
     <method v="2" />
   </configuration>
