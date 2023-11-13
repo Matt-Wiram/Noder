@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 // first start of new page
 var deleteRouter = require('./routes/delete');
 var profileRouter = require('./routes/profile')
+var createrRouter = require('./routes/creater')
 
 
 var app = express();
@@ -28,6 +29,7 @@ app.use('/users', usersRouter);
 // updated view using profile now to see how to switch views
 app.use('/profile', profileRouter);
 app.use('/delete', deleteRouter)
+app.use('/creater', createrRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

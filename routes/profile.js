@@ -2,6 +2,7 @@ var express = require('express');
 const {getFirestore} = require("firebase-admin/firestore");
 var router = express.Router();
 
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
     res.send('this is updater');
@@ -20,5 +21,6 @@ async function updater() {
 }
 
 updater()
+
 
 module.exports = router;
