@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var deleteRouter = require('./routes/delete');
 var profileRouter = require('./routes/profile')
 var createrRouter = require('./routes/creater')
+var mapperRouter = require('./routes/mapper')
 
 
 var app = express();
@@ -30,6 +31,7 @@ app.use('/users', usersRouter);
 app.use('/profile', profileRouter);
 app.use('/delete', deleteRouter)
 app.use('/creater', createrRouter)
+app.use('/mapper', mapperRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
