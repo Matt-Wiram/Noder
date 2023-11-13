@@ -1,6 +1,6 @@
 {
   "name": "Noder",
-  "start": "app.js",
+  "start": "node app.js",
   "version": "1.0.0",
   "dependencies": {
     "body-parser": "^1.20.2",
