@@ -1,5 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const {getFirestore} = require("firebase-admin/firestore");
+
+const db = getFirestore();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -8,9 +11,26 @@ router.get('/', function(req, res, next) {
 
 router.post('/',function (req,res)
 {
-    let name = req.params
+    let body = req.body
+    let first = JSON.stringify(body.first)
+    let last = JSON.stringify(body.last)
+    let born = JSON.stringify(body.born)
+    let username = JSON.stringify(body.username)
 
-    console.log(name);
+    const docRef = db.collection('users').doc(username)
+    start(first, last, born, docRef)
+
 })
+
+;
+
+async function start(first, last, born, docRef) {
+    await docRef.set({
+        first: first,
+        last: last,
+        born: born
+    });
+
+}
 
 module.exports = router;

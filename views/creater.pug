@@ -6,7 +6,12 @@ html(lang='en')
     body
         form(action='/creater' method='post')
             | Username
-            input(type='text' name='name')
-            |     Password
-            input(type='text' name='password')
+            input(type='text' name='username')
+            | First
+            input(type='text' name='first')
+            | Last
+            input(type='text' name='last')
+            | Born
+            input(type='text' name='born')
+            |
             input(type='submit' value='Log In')
