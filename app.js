@@ -15,6 +15,15 @@ var mapperRouter = require('./routes/mapper')
 
 var app = express();
 
+
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
+
+const serviceAccount = require('./serviceAccount.json');
+
+initializeApp({
+  credential: cert(serviceAccount)
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
