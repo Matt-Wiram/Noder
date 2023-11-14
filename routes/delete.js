@@ -13,6 +13,7 @@ router.post('/', function (req, res) {
     let body = req.body
     let username = JSON.stringify(body.username)
     deleter(username)
+    return res.redirect("/")
 })
 
 async function deleter(user) {
