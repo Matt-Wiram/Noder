@@ -246,5 +246,5 @@ setInterval(function () {
 
         getRoute(coords);
     })
-},5000);
+},4000);
 
