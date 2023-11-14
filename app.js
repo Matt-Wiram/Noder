@@ -7,8 +7,8 @@ var logger = require('morgan');
 const PORT = process.env.PORT || 3000
 
 
-const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/lib/app');
+const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/lib/firestore');
 
 const serviceAccount = require('./serviceAccount.json');
 
