@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-const PORT = process.env.PORT || 3000
+
 
 
 const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
@@ -17,12 +17,12 @@ initializeApp({
 });
 
 var indexRouter = require('./index');
-var usersRouter = require('/routes/users');
+var usersRouter = require('./routes/users');
 // first start of new page
-var deleteRouter = require('/routes/delete');
-var profileRouter = require('/routes/profile')
-var createrRouter = require('/routes/creater')
-var mapperRouter = require('/routes/mapper')
+var deleteRouter = require('./routes/delete');
+var profileRouter = require('./routes/profile')
+var createrRouter = require('./routes/creater')
+var mapperRouter = require('./routes/mapper')
 
 
 var app = express();
@@ -61,8 +61,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`)
-})
+
 
 module.exports = app;
