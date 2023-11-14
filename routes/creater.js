@@ -6,7 +6,7 @@ const db = getFirestore();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('creater', { title: 'Express', name: 'Matt' });
+    res.render('creater');
 });
 
 router.post('/',function (req,res)
