@@ -7,7 +7,7 @@ var logger = require('morgan');
 
 
 
-const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/lib/app');
 const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
 
 const serviceAccount = require('./serviceAccount.json');
