@@ -7,6 +7,15 @@ var logger = require('morgan');
 const PORT = process.env.PORT || 3000
 
 
+const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
+const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
+
+const serviceAccount = require('./serviceAccount.json');
+
+initializeApp({
+  credential: cert(serviceAccount)
+});
+
 var indexRouter = require('./index');
 var usersRouter = require('/routes/users');
 // first start of new page
