@@ -20,6 +20,8 @@ router.post('/',function (req,res)
     const docRef = db.collection('users').doc(username)
     start(first, last, born, docRef)
 
+    return res.redirect("/")
+
 })
 
 ;
