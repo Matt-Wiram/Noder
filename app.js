@@ -7,7 +7,7 @@ var logger = require('morgan');
 const PORT = process.env.PORT || 3000
 
 
-var indexRouter = require('/index');
+var indexRouter = require('./index');
 var usersRouter = require('/routes/users');
 // first start of new page
 var deleteRouter = require('/routes/delete');
