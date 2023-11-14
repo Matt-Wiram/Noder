@@ -3,13 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const { applicationDefault, initializeApp } =require('firebase-admin/app');
-export const app = initializeApp({
-  credential: applicationDefault(),
-});
 
-
-
+const { applicationDefault, initializeApp } = require('firebase-admin/app');
 // const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
 
@@ -18,6 +13,10 @@ const serviceAccount = require('./serviceAccount.json');
 // initializeApp({
 //   credential: cert(serviceAccount)
 // });
+
+initializeApp({
+    credentials: applicationDefault()
+})
 
 var indexRouter = require('./index');
 var usersRouter = require('./routes/users');
