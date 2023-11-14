@@ -4,9 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-const { applicationDefault, initializeApp } = require('firebase-admin/app');
+const { applicationDefault, initializeApp } = require('firebase-admin/lib/app');
 // const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
+const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/lib/firestore');
 
 const serviceAccount = require('./serviceAccount.json');
 
