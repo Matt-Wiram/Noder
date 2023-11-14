@@ -15,15 +15,16 @@ async function getter() {
   });
 
 }
-
-/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('./hello', {name: arr})
-  // res.send('respond with a resource');
+  res.render('users', {name: arr})
+
 });
-
-
-
-
 getter()
+/* GET users listing. */
+
+
+
+
+
+
 module.exports = router;

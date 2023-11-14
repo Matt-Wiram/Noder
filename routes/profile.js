@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.send('this is updater');
+    res.render("profile");
 });
 
 const db = getFirestore();
@@ -20,7 +20,7 @@ async function updater() {
 
 }
 
-updater()
+// updater()
 
 
 module.exports = router;
