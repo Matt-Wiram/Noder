@@ -17,5 +17,8 @@
     "mongoose": "^8.0.0",
     "morgan": "^1.10.0",
     "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "firebase": "^10.6.0"
   }
 }
