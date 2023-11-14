@@ -3,18 +3,21 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+import { applicationDefault, initializeApp } from 'firebase-admin/app';
+export const app = initializeApp({
+  credential: applicationDefault(),
+});
 
 
 
-
-const { initializeApp, applicationDefault, cert } = require('firebase-admin/lib/app');
+// const { initializeApp, applicationDefault, cert } = require('firebase-admin/app');
 const { getFirestore, Timestamp, FieldValue, Filter } = require('firebase-admin/firestore');
 
 const serviceAccount = require('./serviceAccount.json');
 
-initializeApp({
-  credential: cert(serviceAccount)
-});
+// initializeApp({
+//   credential: cert(serviceAccount)
+// });
 
 var indexRouter = require('./index');
 var usersRouter = require('./routes/users');
