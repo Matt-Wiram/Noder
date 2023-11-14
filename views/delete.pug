@@ -1,5 +1,11 @@
-extends layout
-
-block content
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Title
     body
-    p Well isnt this a suprise
+        form(action= 'https://cryptic-tor-56909-5784f15687f4.herokuapp.com/delete' method='post')
+            | Username
+            input(type='text' name='username')
+            |
+            input(type='submit' value='Log In')
