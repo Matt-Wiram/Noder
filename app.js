@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-import { applicationDefault, initializeApp } from 'firebase-admin/app';
+const { applicationDefault, initializeApp } =require('firebase-admin/app');
 export const app = initializeApp({
   credential: applicationDefault(),
 });
